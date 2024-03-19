@@ -30,4 +30,4 @@ To get a local copy of the project up and running, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ouhssini/calculator.git
+   git clone https://github.com/ouhssini/Calculator.git
