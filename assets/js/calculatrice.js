@@ -8,7 +8,11 @@ let operators = ["+", "-", "*", "/", "%"];
 
 // Function to update the content of the screen
 function updateScreen() {
-  screen.innerText = current;
+  if (current.length >= 19) {
+    screen.innerText = current.slice(-19);
+} else {
+    screen.innerText = current;
+}
 }
 
 function calculate() {

@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'digital-7';
+    src: url('../fonts/digital-7.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 body {
     background-color: #e4e5ec;
@@ -48,15 +55,17 @@ body {
     background-color: #ffffff;
     border-radius: 15px;
     flex-basis: 280px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
 }
 .screen{
  font-size: 30px;
- /* background-color: aquamarine; */
+ font-family: digital-7;
 border-top-left-radius: 15px;
 border-top-right-radius: 15px;
-padding: 60px 10px 0px;
+padding: 60px 20px 0px 10px;
+overflow: hidden; /* Hide overflow content */
 }
 
 .buttons {
