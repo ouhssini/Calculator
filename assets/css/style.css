@@ -102,3 +102,26 @@ padding: 60px 10px 0px;
     background-color: #58b3f0;
     color: #ffffff;
 }
+@media screen and (max-width: 768px){
+    .text {
+        display: none;
+    }
+    .container{
+        display: block;
+        width: 100%;;
+        
+}
+    .calcule {
+        width: 100%;
+        margin: 0 auto;
+        min-height: 100vh;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+.screen {
+    margin-top: 50px;
+}
+}
