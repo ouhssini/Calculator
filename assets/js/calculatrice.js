@@ -5,14 +5,15 @@ let prev = null;
 let operator = null;
 let numbers = ["0", "00", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let operators = ["+", "-", "*", "/", "%"];
+let isEqualClicked = false; 
 
 // Function to update the content of the screen
 function updateScreen() {
   if (current.length >= 19) {
     screen.innerText = current.slice(-19);
-} else {
+  } else {
     screen.innerText = current;
-}
+  }
 }
 
 function calculate() {
@@ -29,7 +30,7 @@ function calculate() {
       break;
     case "/":
       if (parseFloat(current) === 0) {
-        result = "Can't divide by Zero"; // Error handling for division by zero
+        result = "Can't divide by Zero";
       } else {
         result = parseFloat(prev) / parseFloat(current);
       }
@@ -52,6 +53,7 @@ buttons.forEach((btn) => {
       current = "0";
       prev = null;
       operator = null;
+      isEqualClicked = false;
       updateScreen();
     } else if (btnValue === "DEL") {
       if (current.length === 1) {
@@ -64,10 +66,15 @@ buttons.forEach((btn) => {
       current += ".";
       updateScreen();
     } else if (numbers.includes(btnValue)) {
-      if (current === "0") {
-        current = btnValue === "00" ? "0" : btnValue;
+      if (isEqualClicked) {
+        current = btnValue; 
+        isEqualClicked = false; 
       } else {
-        current += btnValue;
+        if (current === "0") {
+          current = btnValue === "00" ? "0" : btnValue;
+        } else {
+          current += btnValue;
+        }
       }
       updateScreen();
     } else if (operators.includes(btnValue)) {
@@ -82,10 +89,11 @@ buttons.forEach((btn) => {
         current = "0";
         operator = btnValue;
       }
-     
+      isEqualClicked = false;
     } else if (btnValue === "=") {
       if (prev !== null && operator !== null) {
         calculate();
+        isEqualClicked = true; 
         prev = null;
       }
     }
