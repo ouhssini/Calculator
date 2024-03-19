@@ -122,4 +122,9 @@ padding: 60px 10px 0px;
         -ms-border-radius: 0;
         -o-border-radius: 0;
 }
+.screen {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
 }
