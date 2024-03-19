@@ -86,6 +86,7 @@ buttons.forEach((btn) => {
     } else if (btnValue === "=") {
       if (prev !== null && operator !== null) {
         calculate();
+        prev = null;
       }
     }
   });
