@@ -75,7 +75,7 @@ overflow: hidden; /* Hide overflow content */
     flex: 1;
     padding: 10px;
     gap: 10px;
-    user-select: none; /* Standard syntax */
+    user-select: none; /* Standard syntax  prevent text selection*/
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
