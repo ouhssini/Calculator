@@ -80,7 +80,7 @@ buttons.forEach((btn) => {
     } else if (operators.includes(btnValue)) {
       if (prev === null) {
         prev = current;
-        current = "0";
+        current = "0";        
         operator = btnValue;
         updateScreen();
       } else {

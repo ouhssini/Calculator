@@ -66,7 +66,6 @@ border-top-left-radius: 15px;
 border-top-right-radius: 15px;
 padding: 60px 20px 0px 10px;
 overflow: hidden; /* Hide overflow content */
-background: linear-gradient(to bottom, gray, white);
 }
 
 .buttons {
@@ -138,10 +137,5 @@ background: linear-gradient(to bottom, gray, white);
     display: flex;
     align-items: flex-end;
     padding-bottom: 20px;
-    border-radius: 0%;
-    -webkit-border-radius: 0%;
-    -moz-border-radius: 0%;
-    -ms-border-radius: 0%;
-    -o-border-radius: 0%;
 }
 }
